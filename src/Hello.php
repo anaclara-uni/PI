@@ -3,6 +3,6 @@ namespace Application;
 
 class Hello {
     public static function message() : string {
-        return "Hello World!!!";
+        return "Digite seu login e sua senha";
     }
 }
