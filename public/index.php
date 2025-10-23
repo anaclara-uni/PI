@@ -1,20 +1,15 @@
 <?php
 require '../vendor/autoload.php';
-
-use Application\Hello;
+include '../public/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Achados & Perdidos Unifio - Login</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
-<link href="./css/default.css" rel="stylesheet" />
+ 
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4A90E2, #50E3C2);
+      background: linear-gradient(135deg, #f85d03ff, rgba(238, 105, 28, 1));
       height: 100vh;
       display: flex;
       flex-direction: column;
@@ -22,23 +17,14 @@ use Application\Hello;
       align-items: center;
       margin: 0;
     }
-    /* Estilo da pagina*/
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4A90E2, #e8eae7ff);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-    }
+    
 
     /* Caixa do login */
     .login-container {
       background: white;
       padding: 40px;
       border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 20px rgba(38, 138, 71, 0.2);
       width: 300px;
       text-align: center;
     }
@@ -91,6 +77,23 @@ use Application\Hello;
     .signup a:hover {
       text-decoration: underline;
     }
+
+    .imagem-canto {
+       width: 250px; 
+  height: auto;
+   position: fixed; 
+  top: 20px;
+  right: 20px;
+    }  
+
+      .imagem-canto-esquerdo {
+              width: 250px; 
+  height: auto;
+   position: fixed; 
+  top: 10px;
+  left: 20px;
+      }
+    
   </style>
 </head>
 <body>
@@ -103,7 +106,7 @@ use Application\Hello;
       <button class="btn-login">Entrar</button>
     </form>
     <div class="signup">
-      <p>Não tem uma conta? <a href="#">Crie uma conta</a></p>
+      <p>Não tem uma conta? <a href="#">Criar conta</a></p>
     </div>
   </div>
 

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achados e Perdidos</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c70909;
+        }
+        header {
+            background-color: #9b2020;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width:  100%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            width: 60%;
+        }
+        .search-bar input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            background-color: #4c90af;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #45a09b;
+        }
+        .menu {
+            width: 20%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+        .menu ul li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .menu ul li a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+        }
+        .menu ul li a:hover {
+            background-color: #f1f1f1;
+        }
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item {
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .item img {
+            width: 30%;
+            border-radius: 20px;
+            display: grid;
+            place-items: center;
+        }
+        footer {
+            background-color: #ee6911;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Achados e Perdidos</h1>
+    <p>Encontre o que você perdeu ou ajude alguém a encontrar o que perdeu</p>
+</header>
+
+<div class="container">
+    <div class="search-bar">
+        <input type="text" placeholder="O que você está procurando?" id="searchInput">
+        <button onclick="searchItem()">Buscar</button>
+    </div>
+    <div class="menu">
+        <h3>Categorias</h3>
+        <ul>
+            <li><a href="#">Cadernos</a></li>
+            <li><a href="#">Bolsas</a></li>
+            <li><a href="#">Pertences pessoais</a></li>
+            <li><a href="#">Outros</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="items">
+    <div class="item">
+        <img src="caderno-de-mensagens-holografico-para-15-anos-com-fotos-livro-para-assinaturas-personalizado-com-fot.webp" alt="Item 1" width="1000" height="200">
+        <p>Perdido: Caderno </p>
+        <p><strong>Status:</strong> Encontrado</p>
+    </div>
+    <div class="item">
+        <img src="180_oculos_de_sol_masculino_nao_polarizada_15001_c02_prata_58991_2_1eb156f890da7a47b7e91fe02055c316.webp" alt="Item 2" width="1000" height="200">
+        <p>Achado: Óculos de Sol</p>
+        <p><strong>Status:</strong> Perdido</p>
+    </div>
+    <div class="item">
+        <img src="man-holding-an-empty-wallet-and-few-coins.webp" alt="Item 3" width="1000" height="200">
+        <p>Perdido: Carteira</p>
+        <p><strong>Status:</strong> Encontrado</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; *2025 Achados e Perdidos.UNIFIO*</p>
+</footer>
+
+<script>
+    function searchItem() {
+        let searchTerm = document.getElementById('searchInput').value.toLowerCase();
+        alert("Você está procurando: " + searchTerm);
+    }
+</script>
+
+</body>
+</html>
